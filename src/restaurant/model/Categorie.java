@@ -9,5 +9,5 @@ package restaurant.model;
  * @author jose
  */
 public class Categorie {
-    
+    String nom ;
 }
