@@ -8,6 +8,7 @@ package restaurant.util;
  *
  * @author jose
  */
+
 public class DBConnection {
     
 }
