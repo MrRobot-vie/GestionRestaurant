@@ -14,6 +14,7 @@ import restaurant.util.DBConnection;
  */
 public class MouvementStockDAO {
     
+   
 
     public void ajouterMouvement(MouvementStock m) throws SQLException {
         String sql = """
@@ -52,6 +53,5 @@ public class MouvementStockDAO {
         con.close();
         return list;
     }
-}
     
-
+}

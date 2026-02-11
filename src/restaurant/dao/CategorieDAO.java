@@ -8,11 +8,14 @@ import java.util.*;
 import restaurant.model.Categorie;
 import restaurant.util.DBConnection;
 
+
 /**
  *
  * @author jose
  */
 public class CategorieDAO {
+   
+
     public void ajouterCategorie(Categorie c) throws SQLException {
         String sql = "INSERT INTO categorie(libelle) VALUES(?)";
         Connection con = DBConnection.getConnection();
@@ -21,6 +24,7 @@ public class CategorieDAO {
         ps.executeUpdate();
         con.close();
     }
+
     public List<Categorie> listerCategories() throws SQLException {
         List<Categorie> list = new ArrayList<>();
         String sql = "SELECT * FROM categorie";
@@ -36,7 +40,7 @@ public class CategorieDAO {
         con.close();
         return list;
     }
-    public Categorie trouverParId(int id) throws SQLException {
+     public Categorie trouverParId(int id) throws SQLException {
         String sql = "SELECT * FROM categorie WHERE id_categorie=?";
         Connection con = DBConnection.getConnection();
         PreparedStatement ps = con.prepareStatement(sql);
@@ -52,6 +56,7 @@ public class CategorieDAO {
         con.close();
         return c;
     }
+
     public void modifierCategorie(Categorie c) throws SQLException {
         String sql = "UPDATE categorie SET libelle=? WHERE id_categorie=?";
         Connection con = DBConnection.getConnection();
@@ -61,6 +66,7 @@ public class CategorieDAO {
         ps.executeUpdate();
         con.close();
     }
+
     public void supprimerCategorie(int id) throws SQLException {
         String sql = "DELETE FROM categorie WHERE id_categorie=?";
         Connection con = DBConnection.getConnection();
@@ -70,5 +76,4 @@ public class CategorieDAO {
         con.close();
     }
     
-
 }
