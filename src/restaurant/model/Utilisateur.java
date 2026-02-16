@@ -9,6 +9,7 @@ package restaurant.model;
  * @author jose
  */
 public class Utilisateur {
+
   private int idUtilisateur;
     private String login;
     private String motDePasse;
@@ -45,4 +46,5 @@ public class Utilisateur {
     public void setMotDePasse(String motDePasse) {
         this.motDePasse = motDePasse;
     }
+
 }

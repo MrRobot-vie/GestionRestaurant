@@ -8,6 +8,6 @@ package restaurant.controller;
  *
  * @author jose
  */
-public class LoginController {
+public class CommandeController {
     
 }

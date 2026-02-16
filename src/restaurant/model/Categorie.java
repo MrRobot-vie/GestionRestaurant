@@ -37,5 +37,17 @@ public class Categorie {
         this.libelle = libelle;
     }
     
+<<<<<<< HEAD
 
+=======
+   private int idCategorie;
+    private String libelle;
+
+    public int getIdCategorie() { return idCategorie; }
+    public void setIdCategorie(int idCategorie) { this.idCategorie = idCategorie; }
+
+    public String getLibelle() { return libelle; }
+    public void setLibelle(String libelle) { this.libelle = libelle; } 
+    
+>>>>>>> dao
 }
