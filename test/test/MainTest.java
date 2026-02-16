@@ -14,9 +14,9 @@ import restaurant.model.Produit;
     public class MainTest {
     public static void main(String[] args) throws Exception {
         Produit p = new Produit();
-        p.setNom("Coca");
-        p.setPrixVente(500);
-        p.setStockActuel(20);
+        p.setNom("Rush");
+        p.setPrixVente(250);
+        p.setStockActuel(2);
 
         ProduitDAO dao = new ProduitDAO();
         dao.ajouterProduit(p);

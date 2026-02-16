@@ -1,0 +1,67 @@
+create  database gestion_restaurant;
+
+-- table utilisateur
+create table utilisateur (
+id_utilisateur int not null auto_increment primary key,
+login  VARCHAR (50) not null UNIQUE,
+mot_de_passe varchar(200) not null);
+
+--table categorie
+create table categorie (
+id_categorie int not null auto_increment primary key,
+libelle varchar(100) not null UNIQUE);
+
+--table produit
+create table produit (
+id_produit int not null auto_increment primary key ,
+nom varchar(100) not null,
+prix_vente double not null check (prix_vente > 0),
+sotck_actuel int not null check (sotck_actuel >= 0),
+seuil_alerte int not null check (sotck_actuel >=0),
+id_categorie int not null,
+ FOREIGN key (id_categorie)
+ REFERENCES categorie(id_categorie) on update cascade on delete cascade);
+ 
+ --table mouvement_stock 
+create table mouvement_stock(
+id_mouvement int not null auto_increment primary key ,
+type_mouvement enum ('ENTREE','SORTIE') not null,
+quantite int not null check (quantite > 0),
+date_mouvement datetime default CURRENT_TIMESTAMP,
+motif varchar (100),
+id_produit int not null,
+CONSTRAINT fk_mouvement_produit foreign key id_produit
+REFERENCES produit(id_produit) on update cascade on delete cascade);
+
+--table commande
+CREATE TABLE commande (
+    id_commande INT not null  AUTO_INCREMENT PRIMARY KEY,
+    date_commande DATETIME DEFAULT CURRENT_TIMESTAMP,
+    etat ENUM('EN_COURS','VALIDEE','ANNULEE') NOT NULL,
+    total DOUBLE NOT NULL DEFAULT 0
+);
+
+--table ligne_commande
+CREATE TABLE ligne_commande (
+    id_ligne INT not null AUTO_INCREMENT PRIMARY KEY,
+    quantite INT NOT NULL CHECK (quantite > 0),
+    prix_unitaire DOUBLE NOT NULL CHECK (prix_unitaire > 0),
+    montant_ligne DOUBLE NOT NULL,
+    id_commande INT NOT NULL,
+    id_produit INT NOT NULL,
+    CONSTRAINT fk_ligne_commande
+        FOREIGN KEY (id_commande)
+        REFERENCES commande(id_commande)
+        ON UPDATE CASCADE
+        ON DELETE CASCADE,
+    CONSTRAINT fk_ligne_produit
+        FOREIGN KEY (id_produit)
+        REFERENCES produit(id_produit)
+        ON UPDATE CASCADE
+        ON DELETE RESTRICT
+);
+
+--INDEX
+CREATE INDEX idx_produit_categorie ON produit(id_categorie);
+CREATE INDEX idx_ligne_commande ON ligne_commande(id_commande);
+CREATE INDEX idx_ligne_produit ON ligne_commande(id_produit);
