@@ -9,16 +9,40 @@ package restaurant.model;
  * @author jose
  */
 public class Utilisateur {
-    private int idUtilisateur;
+  private int idUtilisateur;
     private String login;
     private String motDePasse;
 
-    public int getIdUtilisateur() { return idUtilisateur; }
-    public void setIdUtilisateur(int idUtilisateur) { this.idUtilisateur = idUtilisateur; }
+    public Utilisateur() {
+    }
 
-    public String getLogin() { return login; }
-    public void setLogin(String login) { this.login = login; }
+    public Utilisateur(int idUtilisateur, String login, String motDePasse) {
+        this.idUtilisateur = idUtilisateur;
+        this.login = login;
+        this.motDePasse = motDePasse;
+    }
 
-    public String getMotDePasse() { return motDePasse; }
-    public void setMotDePasse(String motDePasse) { this.motDePasse = motDePasse; }
+    public int getIdUtilisateur() {
+        return idUtilisateur;
+    }
+
+    public void setIdUtilisateur(int idUtilisateur) {
+        this.idUtilisateur = idUtilisateur;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getMotDePasse() {
+        return motDePasse;
+    }
+
+    public void setMotDePasse(String motDePasse) {
+        this.motDePasse = motDePasse;
+    }
 }
