@@ -13,7 +13,7 @@ import java.util.Date;
 public class Commande {
     private int idCommande;
     private Date dateCommande;
-<<<<<<< HEAD
+
     private double total;
     private String etat;
 
@@ -57,21 +57,8 @@ public class Commande {
     public void setEtat(String etat) {
         this.etat = etat;
     }
-=======
-    private String etat;
-    private double total;
 
-    public int getIdCommande() { return idCommande; }
-    public void setIdCommande(int idCommande) { this.idCommande = idCommande; }
 
-    public Date getDateCommande() { return dateCommande; }
-    public void setDateCommande(Date dateCommande) { this.dateCommande = dateCommande; }
 
-    public String getEtat() { return etat; }
-    public void setEtat(String etat) { this.etat = etat; }
-
-    public double getTotal() { return total; }
-    public void setTotal(double total) { this.total = total; }
->>>>>>> dao
     
 }
