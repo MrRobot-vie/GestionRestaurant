@@ -65,3 +65,8 @@ CREATE TABLE ligne_commande (
 CREATE INDEX idx_produit_categorie ON produit(id_categorie);
 CREATE INDEX idx_ligne_commande ON ligne_commande(id_commande);
 CREATE INDEX idx_ligne_produit ON ligne_commande(id_produit);
+
+
+
+ALTER TABLE utilisateur
+ADD role ENUM('ADMIN', 'CAISSIER') NOT NULL DEFAULT 'CAISSIER';

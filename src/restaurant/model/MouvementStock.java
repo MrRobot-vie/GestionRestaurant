@@ -80,4 +80,5 @@ public class MouvementStock {
         this.idProduit = idProduit;
     }
 
+    
 }

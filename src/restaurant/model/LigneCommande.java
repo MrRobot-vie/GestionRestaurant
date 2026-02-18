@@ -1,7 +1,13 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package restaurant.model;
 
-
+/**
+ *
+ * @author jose
+ */
 public class LigneCommande {
     private int idLigne;
     private int idCommande;
@@ -9,8 +15,9 @@ public class LigneCommande {
     private int quantite;
     private double prixUnitaire;
     private double montantLigne;
-    
-    public LigneCommande(){}
+
+    public LigneCommande() {
+    }
 
     public LigneCommande(int idLigne, int idCommande, int idProduit,
                          int quantite, double prixUnitaire, double montantLigne) {
@@ -67,6 +74,7 @@ public class LigneCommande {
     public void setMontantLigne(double montantLigne) {
         this.montantLigne = montantLigne;
     }
+
 
 
 }

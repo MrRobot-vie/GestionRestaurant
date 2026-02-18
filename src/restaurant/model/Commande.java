@@ -13,7 +13,6 @@ import java.util.Date;
 public class Commande {
     private int idCommande;
     private Date dateCommande;
-
     private double total;
     private String etat;
 
@@ -58,7 +57,4 @@ public class Commande {
         this.etat = etat;
     }
 
-
-
-    
 }
