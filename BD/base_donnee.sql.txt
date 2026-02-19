@@ -70,3 +70,9 @@ CREATE INDEX idx_ligne_produit ON ligne_commande(id_produit);
 
 ALTER TABLE utilisateur
 ADD role ENUM('ADMIN', 'CAISSIER') NOT NULL DEFAULT 'CAISSIER';
+
+INSERT INTO utilisateur (login, mot_de_passe, role)
+VALUES ('admin', 'admin123', 'ADMIN');
+
+INSERT INTO utilisateur (login, mot_de_passe, role)
+VALUES ('caissier1', 'cash123', 'CAISSIER');
