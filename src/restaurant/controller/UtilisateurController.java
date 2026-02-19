@@ -3,33 +3,33 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package restaurant.controller;
+
 import restaurant.dao.UtilisateurDAO;
 import restaurant.model.Utilisateur;
-import java.sql.SQLException;
 
-/**
- *
- * @author jose
- */
 public class UtilisateurController {
-   
 
-    private UtilisateurDAO utilisateurDAO = new UtilisateurDAO();
+    private UtilisateurDAO dao = new UtilisateurDAO();
 
-    public Utilisateur login(String login, String motDePasse) throws SQLException {
-        Utilisateur u = utilisateurDAO.authentifier(login, motDePasse);
-
+    // Connexion
+    public Utilisateur seConnecter(String login, String mdp) throws Exception {
+        Utilisateur u = dao.authentifier(login, mdp);
         if (u == null) {
-            throw new IllegalArgumentException("Login ou mot de passe incorrect");
+            throw new Exception("Login ou mot de passe incorrect");
         }
         return u;
     }
 
-    public void creerUtilisateur(String login, String mdp) throws SQLException {
-        Utilisateur u = new Utilisateur();
-        u.setLogin(login);
-        u.setMotDePasse(mdp);
-        utilisateurDAO.ajouterUtilisateur(u);
+    //  Création utilisateur (ADMIN seulement)
+    public void creerUtilisateur(Utilisateur utilisateurConnecte, Utilisateur nouveau) throws Exception {
+        if (!utilisateurConnecte.getRole().equals("ADMIN")) {
+            throw new Exception("Action interdite : ADMIN uniquement");
+        }
+        dao.ajouterUtilisateur(nouveau);
+    }
+
+    //  Vérification de droits
+    public boolean estAdmin(Utilisateur u) {
+        return u.getRole().equals("ADMIN");
     }
 }
-

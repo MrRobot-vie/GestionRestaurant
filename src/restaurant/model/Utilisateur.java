@@ -4,23 +4,20 @@
  */
 package restaurant.model;
 
-/**
- *
- * @author jose
- */
 public class Utilisateur {
 
-  private int idUtilisateur;
+    private int idUtilisateur;
     private String login;
     private String motDePasse;
+    private String role; // ADMIN / CAISSIER
 
-    public Utilisateur() {
-    }
+    public Utilisateur() {}
 
-    public Utilisateur(int idUtilisateur, String login, String motDePasse) {
+    public Utilisateur(int idUtilisateur, String login, String motDePasse, String role) {
         this.idUtilisateur = idUtilisateur;
         this.login = login;
         this.motDePasse = motDePasse;
+        this.role = role;
     }
 
     public int getIdUtilisateur() {
@@ -47,4 +44,11 @@ public class Utilisateur {
         this.motDePasse = motDePasse;
     }
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 }

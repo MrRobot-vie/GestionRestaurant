@@ -3,12 +3,25 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/src/restaurant/model/LigneCommande.java</file>
+            <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/src/restaurant/view/ProduitFrame.java</file>
+            <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/src/restaurant/view/Produit_CatDialog.java</file>
+            <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/src/restaurant/view/ConfirmDialog.java</file>
+            <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/src/restaurant/MainApp.java</file>
             <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/test/test/MainTest.java</file>
             <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/src/restaurant/model/Commande.java</file>
             <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/src/restaurant/model/Produit.java</file>
+            <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/src/restaurant/dao/CategorieDAO.java</file>
+            <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/src/restaurant/model/Utilisateur.java</file>
+            <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/src/restaurant/util/DBConnection.java</file>
+            <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/src/restaurant/view/CommandeFrame.java</file>
+            <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/src/restaurant/model/LigneCommande.java</file>
+            <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/src/restaurant/controller/CategorieController.java</file>
+            <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/src/restaurant/view/CategorieFrame.java</file>
+            <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/src/restaurant/dao/UtilisateurDAO.java</file>
+            <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/src/restaurant/view/DashboardFrame.java</file>
             <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/src/restaurant/model/Categorie.java</file>
             <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/src/restaurant/model/MouvementStock.java</file>
+            <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/src/restaurant/view/Produitfenetre.java</file>
             <file>file:/C:/Users/DELL/Desktop/GestionRestaurant/src/restaurant/view/LoginFrame.java</file>
         </group>
     </open-files>
