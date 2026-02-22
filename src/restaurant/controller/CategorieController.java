@@ -3,40 +3,33 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package restaurant.controller;
+
 import restaurant.dao.CategorieDAO;
 import restaurant.model.Categorie;
-import java.sql.SQLException;
+
 import java.util.List;
-/**
- *
- * @author jose
- */
+
+
+
+
 public class CategorieController {
-    
-  
 
-    private CategorieDAO categorieDAO = new CategorieDAO();
+    private CategorieDAO dao = new CategorieDAO();
 
-    public void ajouterCategorie(String libelle) throws SQLException {
+    public void ajouterCategorie(String libelle) throws Exception {
+        if (libelle == null || libelle.trim().isEmpty()) {
+            throw new Exception("Libellé obligatoire");
+        }
         Categorie c = new Categorie();
         c.setLibelle(libelle);
-        categorieDAO.ajouterCategorie(c);
+        dao.ajouter(c);
     }
 
-    public List<Categorie> listerCategories() throws SQLException {
-        return categorieDAO.listerCategories();
+    public void supprimerCategorie(int id) throws Exception {
+        dao.supprimer(id);
     }
 
-    public void modifierCategorie(int id, String libelle) throws SQLException {
-        Categorie c = new Categorie();
-        c.setIdCategorie(id);
-        c.setLibelle(libelle);
-        categorieDAO.modifierCategorie(c);
-    }
-
-    public void supprimerCategorie(int id) throws SQLException {
-        categorieDAO.supprimerCategorie(id);
+    public List<Categorie> chargerCategories() throws Exception {
+        return dao.lister();
     }
 }
-    
-
