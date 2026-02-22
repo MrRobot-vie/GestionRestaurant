@@ -75,5 +75,7 @@ public class Produit {
     public void setIdCategorie(int idCategorie) {
         this.idCategorie = idCategorie;
     }
+
+     
   
 }
