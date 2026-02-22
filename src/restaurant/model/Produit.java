@@ -76,6 +76,6 @@ public class Produit {
         this.idCategorie = idCategorie;
     }
 
-
-    
+     
+  
 }

@@ -27,6 +27,8 @@ public class ProduitDAO {
         ps.setInt(3, p.getStockActuel());
         ps.setInt(4, p.getSeuilAlerte());
         ps.setInt(5, p.getIdCategorie());
+        
+        System.out.println("insert produit en base");
 
         ps.executeUpdate();
         con.close();

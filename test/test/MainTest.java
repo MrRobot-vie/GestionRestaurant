@@ -14,7 +14,7 @@ import restaurant.model.Produit;
     public class MainTest {
     public static void main(String[] args) throws Exception {
         Produit p = new Produit();
-        p.setNom("Rush");
+        p.setNom("laitier");
         p.setPrixVente(250);
         p.setStockActuel(2);
 
